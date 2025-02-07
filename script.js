@@ -12,6 +12,12 @@ function applySystemNightMode() {
   // Check if the user prefers dark mode
   if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
     body.classList.add('night-mode');
+    
+  if (body.classList.contains("night-mode")) {
+    toggleLink.textContent = "Light Mode";
+  } else {
+    toggleLink.textContent = "Night Mode";
+  }
   }
 }
 
