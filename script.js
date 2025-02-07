@@ -31,4 +31,4 @@ function toggleNightMode() {
   }
 }
 
-window.addEventListener('load', applySystemNightMode);
+//window.addEventListener('load', applySystemNightMode);
