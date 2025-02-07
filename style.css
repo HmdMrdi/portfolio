@@ -101,6 +101,10 @@ body.night-mode .hamburger-icon span {
   background-color: white;
 }
 
+body.night-mode .menu-links.open{
+  background-color: rgb(85,85,85);
+}
+
 /*End of Night mode styles*/
 
 .logo {
@@ -130,6 +134,7 @@ body.night-mode .hamburger-icon span {
   height: 24px;
   width: 30px;
   cursor: pointer;
+  padding: 10px;
 }
 
 .hamburger-icon span {
@@ -143,12 +148,16 @@ body.night-mode .hamburger-icon span {
   position: absolute;
   top: 100%;
   right: 0;
-  background-color: transparent;
+  padding-bottom: 10px;
   width: fit-content;
   max-height: 0;
   overflow: hidden;
   transition: all 0.3 ease-in-out;
-  padding: 5px;
+}
+.menu-links.open{
+    background-color: whitesmoke;
+    border: 2px solid (135, 135, 135);
+    border-radius: 10px;
 }
 
 .menu-links a {
