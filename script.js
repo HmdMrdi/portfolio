@@ -8,16 +8,13 @@ function toggleMenu() {
 // Function to check and apply night mode based on system preference
 function applySystemNightMode() {
   const body = document.body;
-  
+  const toggleLink = document.getElementById("night-mode-toggle");
   // Check if the user prefers dark mode
   if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
     body.classList.add('night-mode');
-    
-  if (body.classList.contains("night-mode")) {
-    toggleLink.textContent = "Light Mode";
+    toggleLink.textContent = "Light Mode"; // Set the button text to "Light Mode" if dark mode is applied
   } else {
-    toggleLink.textContent = "Night Mode";
-  }
+    toggleLink.textContent = "Night Mode"; // Set the button text to "Night Mode" if dark mode is not applied
   }
 }
 
