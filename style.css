@@ -60,16 +60,6 @@ a:hover {
 }
 
 /*------------------------------------- Night mode styles -------------------------------------*/
-@media (prefers-color-scheme: dark) {
-    body {
-        background-color: #121212;
-        color: white;
-    }
-
-    a {
-        color: #66b3ff; /* Lighter blue link color in dark mode */
-    }
-  
 body.night-mode {
   background-color: #121212;
   color: white;
