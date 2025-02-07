@@ -143,11 +143,12 @@ body.night-mode .hamburger-icon span {
   position: absolute;
   top: 100%;
   right: 0;
-  background-color: Gray;
+  background-color: transparent;
   width: fit-content;
   max-height: 0;
   overflow: hidden;
   transition: all 0.3 ease-in-out;
+  padding: 5px;
 }
 
 .menu-links a {
