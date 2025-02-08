@@ -8,8 +8,12 @@
 }
 
 body {
-  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 100%;
   font-family: "Poppins", sans-serif;
+  overflow-x: hidden; 
 }
 
 html {
@@ -90,6 +94,7 @@ body.night-mode .icon {
 body.night-mode #about {
   background-color: #121212;
   color: white;
+  padding-bottom: 5rem;
 }
 
 body.night-mode #about p,
@@ -105,7 +110,27 @@ body.night-mode .menu-links.open{
   background-color: rgb(85,85,85);
 }
 
-/*End of Night mode styles*/
+body.night-mode #experience .section_text_p {
+  color: lightgray; /* Or a suitable dark mode color */
+  filter: none; /* Remove the invert filter if it's applied here */
+  font-size: medium;
+}
+
+body.night-mode #experience .section_text_p1 {
+    color: white; /* Or a suitable dark mode color */
+    filter: none; /* Remove the invert filter if it's applied here */
+}
+
+body.night-mode #experience li {
+  color: white; /* Or a suitable dark mode color */
+}
+
+/* If you need to invert other elements within #experience, do it specifically: */
+body.night-mode #experience .icon {
+    filter: invert(1);
+} 
+
+/*------------------------------------- End of Night mode styles -------------------------------------*/
 
 .logo {
   font-size: 2rem;
@@ -114,6 +139,7 @@ body.night-mode .menu-links.open{
 .logo:hover {
   cursor: default;
 }
+
 
 /* HAMBURGER MENU*/
 
@@ -200,12 +226,13 @@ body.night-mode .menu-links.open{
 
 /* SECTIONS */
 
+
 section {
   padding-top: 0vh;
-  height: 96vh;
+  min-height: 40rem; /* Adjust as needed */
   margin: 0 2rem;
-  box-sizing: border-box;
-  min-height: fit-content;
+  padding: 2rem 0;
+  flex: 1 0 auto; /* Key: Allow sections to grow and shrink, but respect content height */
 }
 
 .section-container,
@@ -218,7 +245,9 @@ section {
   justify-content: center;
   gap: 5rem;
   padding: 10%;
-  height: 80vh;
+  min-height: 80vh;
+  box-sizing: border-box;
+  padding: 2rem 0;
 }
 
 /* @media (max-width: 1200px) {
@@ -266,6 +295,7 @@ section {
 .title {
   font-size: 3rem;
   text-align: center;
+  padding-bottom: 2%;
 }
 
 #socials-container {
@@ -335,6 +365,20 @@ section {
       background-color: inherit;
     }
   }
+}
+
+#experience {
+  position: relative;
+  background-color: inherit;
+  min-height: 40rem; /* Adjust this value as needed */
+  box-sizing:content-box;
+  padding: 2rem 0;
+}
+
+#experience li {
+  font-size: large;
+  padding-top: 5%;
+  list-style-type:none;
 }
 
 #about {
