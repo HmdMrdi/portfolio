@@ -548,7 +548,7 @@ section {
 /* Footer Section */
 #footer {
   padding: 1rem 0;
-  text-align: center; /* Keep text centered */
+  text-align: left; /* Keep text centered */
   color: white;
   width: 100%;
   min-height: auto;
